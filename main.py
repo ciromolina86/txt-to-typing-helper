@@ -1,13 +1,14 @@
 import pyautogui
 import time
-import os, sys
+import os
+import sys
 
 
 def show_mouse_pos():
     for i in range(10):
         mouse_pos = pyautogui.position()
         # print(f'{10-i} - {mouse_pos}', end='\r')
-        print(f'{10-i} - {mouse_pos}')
+        print(f'{10 - i} - {mouse_pos}')
         sys.stdout.flush()
         time.sleep(1)
 
