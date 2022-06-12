@@ -1,3 +1,12 @@
+"""
+in order to create an executable out of this console script, do this:
+1. install the pyinstaller python package:
+    [cmd]: pip install pyinstaller
+2. from the directory where you want the files to be create, run the following command:
+    [cmd]: pyinstaller -F -w -n DB2UDTConverter --hidden-import udtbase,dbparser,ui,converter <path>/converter.py
+3. find the executable (.exe) under the /dist directory
+"""
+
 import pyautogui
 import time
 import os
@@ -16,13 +25,16 @@ def show_mouse_pos():
 
 
 def main():
-    print('please, move mouse to screen position where typing should occur.')
+    print('Created by: ITG (CM) / 2022')
+    print('Summary: This script helps type text file into remote connections where copy is not possible :)')
+    print()
+    print('Please, move the mouse pointer to screen position where typing should occur.')
     mouse_pos = show_mouse_pos()
-    print(f'mouse position recorded was {mouse_pos}')
-    answer = input("enter 'Y' to confirm, 'N' to cancel: ")
+    print(f'Mouse pointer position recorded was {mouse_pos}')
+    answer = input("Enter 'Y' to confirm, any key to cancel: ")
 
     if answer.lower() == 'y':
-        path = input('enter path of txt file to be typed: ')
+        path = input('Enter absolute path of txt file to be typed: ')
         # path = "typing-data.txt"
 
         if os.path.isfile(path):
