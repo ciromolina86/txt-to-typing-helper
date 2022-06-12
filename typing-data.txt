@@ -1,0 +1,15 @@
+# this is a test of pyautogui script
+
+import pyautogui
+import time
+import os
+
+
+def main():
+    for line in open("typing-data.txt", "r"):
+        pyautogui.typewrite(line)
+        pyautogui.press('enter')
+
+
+if __name__ == '__main__':
+    main()
