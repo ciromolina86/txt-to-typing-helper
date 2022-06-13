@@ -5,6 +5,8 @@ in order to create an executable out of this console script, do this:
 2. from the directory where you want the files to be create, run the following command:
     [cmd]: pyinstaller -F -n txt-to-typing-helper main.py
 3. find the executable (.exe) under the /dist directory
+
+https://pyinstaller.org/en/stable/usage.html#
 """
 
 import pyautogui
